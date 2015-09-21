@@ -1,0 +1,176 @@
+/* From: https://css-tricks.com/examples/ShapesOfCSS */
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-bottom: 70px solid red;
+}
+
+.triangle-up:active {
+	animation-name: triangleUpFade;
+	animation-duration: 2.0s;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-top: 70px solid red;
+}
+
+.triangle-down:active {
+	animation-name: triangleDownFade;
+	animation-duration: 2.0s;
+}
+
+.triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 35px solid transparent;
+	border-right: 70px solid red;
+	border-bottom: 35px solid transparent;
+}
+
+.triangle-left:active {
+	animation-name: triangleLeftFade;
+	animation-duration: 2.0s;
+}
+
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 35px solid transparent;
+	border-left: 70px solid red;
+	border-bottom: 35px solid transparent;
+}
+
+.triangle-right:active {
+	animation-name: triangleRightFade;
+	animation-duration: 2.0s;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+.circle {
+	width: 70px;
+	height: 70px;
+	background: red;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	border-radius: 35px;
+}
+
+.roundedSquare {
+	width: 75px;
+	/*min-height: 75px;*/
+	background: red;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 10px;
+}
+
+.enterSquare {
+	width: 70px;
+	min-height: 70px;
+	background: red;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 0px;
+}
+
+.circle:active, .enterSquare:active, .roundedSquare:active {
+	animation-name: buttonFade;
+	animation-duration: 2.0s;
+}
+
+.oval {
+	width: 200px;
+	height: 100px;
+	background: red;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+}
+
+.tv {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  margin: 20px 0;
+  background: red;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+}
+.tv:before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  background: inherit;
+  border-radius: 5% / 50%;
+}
+
+/* Added stuff */
+.button {
+	display: inline-block;
+	font-weight: bold;
+	color: white;
+	margin: 5px;
+}
+
+.button p {
+	padding-top: 9px;
+}
+
+.twoLines p {
+	padding-top: 2px;
+}
+
+td {
+	border: 1px solid black;
+}
+
+#keyboard {
+	margin: 0 auto;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+@keyframes buttonFade {
+	from {background-color: blue;}
+    to {background-color: red;}
+}
+
+@keyframes triangleUpFade {
+	from {border-bottom: 70px solid blue;}
+    to {border-bottom: 70px solid red;}
+}
+
+@keyframes triangleDownFade {
+	from {border-top: 70px solid blue;}
+    to {border-top: 70px solid red;}
+}
+
+@keyframes triangleLeftFade {
+	from {border-right: 70px solid blue;}
+    to {border-right: 70px solid red;}
+}
+
+@keyframes triangleRightFade {
+	from {border-left: 70px solid blue;}
+    to {border-left: 70px solid red;}
+}

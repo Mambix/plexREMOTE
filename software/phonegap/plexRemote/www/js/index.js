@@ -20,8 +20,8 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        // this.showMainPage();
-        this.showDetailPage();
+        this.showMainPage();
+        // this.showDetailPage();
     },
     // Bind Event Listeners
     //

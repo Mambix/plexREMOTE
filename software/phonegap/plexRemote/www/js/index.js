@@ -20,7 +20,8 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        this.showMainPage();
+        // this.showMainPage();
+        this.showDetailPage();
     },
     // Bind Event Listeners
     //
@@ -36,20 +37,27 @@ var app = {
         deviceList.addEventListener('touchstart', this.connect, false);
 
         //Send keyboard modifiers to Arduino (https://www.arduino.cc/en/Reference/KeyboardModifiers)
-        escapeButton.addEventListener(TOUCH_START, function(){app.sendKey(177, escapeButton);}, false);
-        volumeUpButton.addEventListener(TOUCH_START, function(){app.sendKey(43, volumeUpButton);}, false);
-        volumeDownButton.addEventListener(TOUCH_START, function(){app.sendKey(45, volumeDownButton);}, false);
-        upButton.addEventListener(TOUCH_START, function(){app.sendKey(218, upButton);}, false);
-        leftButton.addEventListener(TOUCH_START, function(){app.sendKey(216, leftButton);}, false);
-        enterButton.addEventListener(TOUCH_START, function(){app.sendKey(176, enterButton);}, false);
-        rightButton.addEventListener(TOUCH_START, function(){app.sendKey(215, rightButton);}, false);
-        downButton.addEventListener(TOUCH_START, function(){app.sendKey(217, downButton);}, false);
+        //PLEX Shortcuts: https://support.plex.tv/hc/en-us/articles/201670487-Keyboard-Shortcuts
+        escapeButton.addEventListener(TOUCH_START, function(){app.sendKey(177, escapeButton);}, false);                    //ESC
+        infoButton.addEventListener(TOUCH_START, function(){app.sendKey(105, infoButton);}, false);                        //i
+        volumeUpButton.addEventListener(TOUCH_START, function(){app.sendKey(43, volumeUpButton);}, false);                 //+
+        volumeDownButton.addEventListener(TOUCH_START, function(){app.sendKey(45, volumeDownButton);}, false);             //-
 
+        audioButton.addEventListener(TOUCH_START, function(){app.sendKey(65, audioButton);}, false);                       //A
+        progressButton.addEventListener(TOUCH_START, function(){app.sendKey(79, progressButton);}, false);                 //O
         subTitleButton.addEventListener(TOUCH_START, function(){app.sendKey(76, subTitleButton);}, false);                 //L
         subTitleToggleButton.addEventListener(TOUCH_START, function(){app.sendKey(83, subTitleToggleButton);}, false);     //S
-        progressButton.addEventListener(TOUCH_START, function(){app.sendKey(79, progressButton);}, false);                  //O
-        infoButton.addEventListener(TOUCH_START, function(){app.sendKey(105, infoButton);}, false);                         //i
-        // pauseButton.addEventListener(TOUCH_START, function(){app.sendKey(217, pauseButton);}, false);
+
+        homeButton.addEventListener(TOUCH_START, function(){app.sendKey(72, homeButton);}, false);                         //H
+        pauseButton.addEventListener(TOUCH_START, function(){app.sendKey(32, pauseButton);}, false);                       //space
+        stopButton.addEventListener(TOUCH_START, function(){app.sendKey(88, stopButton);}, false);                         //X
+        playButton.addEventListener(TOUCH_START, function(){app.sendKey(80, playButton);}, false);                         //P
+
+        upButton.addEventListener(TOUCH_START, function(){app.sendKey(218, upButton);}, false);                            //upArrow
+        leftButton.addEventListener(TOUCH_START, function(){app.sendKey(216, leftButton);}, false);                        //leftArrow
+        enterButton.addEventListener(TOUCH_START, function(){app.sendKey(176, enterButton);}, false);                      //CR
+        rightButton.addEventListener(TOUCH_START, function(){app.sendKey(215, rightButton);}, false);                      //rightArrow
+        downButton.addEventListener(TOUCH_START, function(){app.sendKey(217, downButton);}, false);                        //downArrow
     },
     // deviceready Event Handler
     //

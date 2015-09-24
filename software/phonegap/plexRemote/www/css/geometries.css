@@ -67,6 +67,15 @@
 	border-radius: 35px;
 }
 
+.circleSmall {
+	width: 70px;
+	height: 70px;
+	background: red;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	border-radius: 35px;
+}
+
 .roundedSquare {
 	width: 75px;
 	/*min-height: 75px;*/
@@ -87,7 +96,7 @@
 	padding: 0px;
 }
 
-.circle:active, .enterSquare:active, .roundedSquare:active {
+.circle:active, .enterSquare:active, .roundedSquare:active, .circleSmall:active {
 	animation-name: buttonFade;
 	animation-duration: 2.0s;
 }
@@ -128,19 +137,46 @@
 	display: inline-block;
 	font-weight: bold;
 	color: white;
+	margin: 10px;
+}
+
+.buttonSmall {
+	display: inline-block;
+	font-weight: bold;
+	color: white;
 	margin: 5px;
 }
 
 .button p {
-	padding-top: 9px;
+	padding-top: 10px;
+	font-size: 15px;
+}
+
+.buttonSmall p {
+	padding-top: 14px;
+	font-size: 13px;
 }
 
 .twoLines p {
-	padding-top: 2px;
+	padding-top: 8px;
 }
 
 td {
 	border: 0px solid black;
+}
+
+#funcKeys {
+	margin: 0 auto;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.buttonSmall {
+	margin: 0 auto;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
 }
 
 #keyboard {

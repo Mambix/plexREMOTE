@@ -43,15 +43,15 @@ var app = {
         volumeUpButton.addEventListener(TOUCH_START, function(){app.sendKey(43, volumeUpButton);}, false);                 //+
         volumeDownButton.addEventListener(TOUCH_START, function(){app.sendKey(45, volumeDownButton);}, false);             //-
 
-        audioButton.addEventListener(TOUCH_START, function(){app.sendKey(65, audioButton);}, false);                       //A
-        progressButton.addEventListener(TOUCH_START, function(){app.sendKey(79, progressButton);}, false);                 //O
-        subTitleButton.addEventListener(TOUCH_START, function(){app.sendKey(76, subTitleButton);}, false);                 //L
-        subTitleToggleButton.addEventListener(TOUCH_START, function(){app.sendKey(83, subTitleToggleButton);}, false);     //S
+        audioButton.addEventListener(TOUCH_START, function(){app.sendKey(97, audioButton);}, false);                       //a
+        progressButton.addEventListener(TOUCH_START, function(){app.sendKey(111, progressButton);}, false);                //o
+        subTitleButton.addEventListener(TOUCH_START, function(){app.sendKey(108, subTitleButton);}, false);                //l
+        subTitleToggleButton.addEventListener(TOUCH_START, function(){app.sendKey(115, subTitleToggleButton);}, false);    //s
 
-        homeButton.addEventListener(TOUCH_START, function(){app.sendKey(72, homeButton);}, false);                         //H
+        homeButton.addEventListener(TOUCH_START, function(){app.sendKey(104, homeButton);}, false);                        //h
         pauseButton.addEventListener(TOUCH_START, function(){app.sendKey(32, pauseButton);}, false);                       //space
-        stopButton.addEventListener(TOUCH_START, function(){app.sendKey(88, stopButton);}, false);                         //X
-        playButton.addEventListener(TOUCH_START, function(){app.sendKey(80, playButton);}, false);                         //P
+        stopButton.addEventListener(TOUCH_START, function(){app.sendKey(120, stopButton);}, false);                        //x
+        playButton.addEventListener(TOUCH_START, function(){app.sendKey(112, playButton);}, false);                        //p
 
         upButton.addEventListener(TOUCH_START, function(){app.sendKey(218, upButton);}, false);                            //upArrow
         leftButton.addEventListener(TOUCH_START, function(){app.sendKey(216, leftButton);}, false);                        //leftArrow

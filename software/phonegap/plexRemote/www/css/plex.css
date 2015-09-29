@@ -1,0 +1,52 @@
+
+.button {
+	display: inline-block;
+	font-weight: bold;
+	/*color: white;*/
+	margin: 10px;
+	/*animation-name: buttonFade;
+	animation-duration: 1.0s;*/
+}
+
+td {
+	border: 0px solid black;
+}
+
+#funcKeys {
+	margin: 0 auto;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+	color: red;
+	font-size: 52px;
+}
+
+#keyboard {
+	/*margin-top: 15px;*/
+	margin: 0 auto;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	table-layout: fixed;
+	font-size: 76px;
+	color: gray;
+}
+
+.button:active {
+	color: blue;
+}
+
+/*@keyframes buttonFade {
+	from {color: blue;}
+    to {color: red;}
+}*/
+
+.roundedSquare {
+	width: 75px;
+	/*min-height: 75px;*/
+	background: red;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 10px;
+	color: white;
+}

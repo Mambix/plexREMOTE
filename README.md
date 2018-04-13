@@ -1,4 +1,4 @@
-# plexREMOTE
+# [plexREMOTE](http://mambix.github.io/plexREMOTE/)
 remote control your PLEX media center from your phone
 
 ##What you need?
